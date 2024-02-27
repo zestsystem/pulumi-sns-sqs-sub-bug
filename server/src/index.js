@@ -2,6 +2,9 @@
 
 // ESM
 import Fastify from "fastify";
+import { config } from "dotenv-safe";
+
+config();
 const fastify = Fastify({
     logger: true,
 });
