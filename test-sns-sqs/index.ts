@@ -2,6 +2,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const testQueueEventsTopic = new aws.sns.Topic("testQueueEventsTopic", {});
+export const testQueueEventsTopicArn = testQueueEventsTopic.arn;
 
 const sqsTestQueue = new aws.sqs.Queue("testQueue", {});
 export const sqsTestUrl = sqsTestQueue.url;
